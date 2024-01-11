@@ -21,7 +21,6 @@ body {
 .container {
     z-index: -999;
     background-color: #F5F5F5;
-    /* background-color: black; */
     width: 100%;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -37,23 +36,37 @@ section {
     position: relative;
 }
 
+section .projects {
+  overflow: hidden;
+}
+
 section .about {
     width: 100%;
     height: 100vh;
 }
 
+@media (max-width:1531){
+  .svg path {
+    display: none;
+  }
+}
+
 .about .svg {
+  /* background-color: #111; */
+  transition: all 0.2s ease-in;
     z-index: 1;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: auto;
     overflow: hidden;
+
 }
 
 .svg::before {
+  transition: all 0.2s ease-in;
   content: "";
-  height: 107vh;
-  width: 110vh;
+  height: 108vh;
+  width: 115vh;
   position: absolute;
   top: -14%;
   left: -15%;
@@ -75,13 +88,14 @@ section .about {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+    transition: all 0.3s ease-in;
 }
 
 .navbar li{
+    transition: all 0.3s ease-in;
     height: 6.3vh;
     font-family: 'Poppins', sans-serif; 
-    font-size: 1.2vw;  
+    font-size: 22px;  
 }
 
 .navbar a {
@@ -96,9 +110,10 @@ section .about {
     margin-right: auto;
     font-family: 'Pacifico', cursive;
     color: #F5F5F5;
-    font-size: 2.25vw;
+    font-size: 33px;
     padding-left: 1.75vw;
 }
+
 
 .point{
     position: relative;
@@ -138,6 +153,7 @@ section .about {
 }
 
 .img-container {
+  transition: all 0.3s ease-in;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -151,7 +167,7 @@ section .about {
   
   .img-container img {
     margin-right: -6vw;
-    width: 40vw;
+    width: 660px;
     height: 100%;
     display: block; 
   }  
@@ -159,7 +175,7 @@ section .about {
 
 
 .title {
-  margin-top: -10%;
+    margin-top: -10%;
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -171,7 +187,7 @@ section .about {
 
 .hello {
     font-weight: 600;
-    font-size: 1.5vw;
+    font-size: 28px;
     letter-spacing: 0.72px;
     line-height: normal;
 }
@@ -180,7 +196,7 @@ section .about {
     margin-top: -1.4%;
     font-weight: 700;
     color: #f5f5f5;
-    font-size: 3.1vw;
+    font-size: 50px;
     letter-spacing: 0.15rem;
     line-height: normal;
     white-space: nowrap;
@@ -190,14 +206,14 @@ section .about {
   margin-top: 2.1%;
   margin-bottom: 1.8%;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 16.5px;
     letter-spacing: 1.2px;
     line-height: normal;
 }
 
 .cv {
     
-    font-size: 1vw;
+    font-size: 16.5px;
     background: #f5f5f5;
     color: #4275FA;
     width: 30%;
@@ -242,6 +258,7 @@ section .about {
   }
   
   .text {
+    font-size: 16.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,6 +325,7 @@ section .skills {
 }
 
 .skillfull {
+  transition: all 0.3s ease-in;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -319,9 +337,7 @@ section .skills {
 
 .skillimg {
   width: 100%;
-  /* overflow: hidden; */
   height: 100%;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -332,6 +348,7 @@ section .skills {
 }
 
 .content { 
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -340,7 +357,7 @@ section .skills {
 }
 
 .myskills {
-  font-size: 1.25vw;
+  font-size: 20.625px;
   font-weight: 500;
   letter-spacing: 0.3vw;
   line-height: normal;
@@ -348,7 +365,7 @@ section .skills {
 }
 
 .expertise {
-  font-size: 2vw;
+  font-size: 33px;
   font-weight: 600;
   letter-spacing: 0.72px;
   line-height: normal;
@@ -356,9 +373,9 @@ section .skills {
 }
 
 .mainarea {
-  margin-top: 2.1vw;
-  margin-bottom: 1vw;
-  font-size: 1.2vw;
+  margin-top: 34.65px;
+  margin-bottom: 16.5px;
+  font-size: 19.8px;
   font-weight: 500;
   letter-spacing: 0.1vw;
   line-height: normal;
@@ -366,7 +383,7 @@ section .skills {
 }
 
 .description {
-  font-size: 1.1vw;
+  font-size: 18.15px;
   font-weight: 400;
   letter-spacing: 0.72px;
   line-height: normal;
@@ -374,8 +391,8 @@ section .skills {
 }
 
 .logos {
-  margin-top: 4.9vw;
-  width: 42vw;
+  margin-top: 80.85px;
+  width: 693px;
 }
 
 section .projects {
@@ -385,34 +402,39 @@ section .projects {
 }
 
 .page {
+  transition: all 0.3s ease-in;
   width: 100%;
   height: 100vh;
-  margin-top: 2vw;
+  margin-top: 33px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .heading {
   /* margin-top: 2vw; */
   width: 87vw;
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5vw;
+  font-size: 41.25px;
   font-weight: 700;
   color: #282938;
 }
 
 .card-container {
+  transition: all 0.3s ease-in;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 3.1vw;
+  overflow: hidden;
 }
 
 .card {
-  width : 27vw;
+  overflow: hidden;
+  width : 445.5px;
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
@@ -422,35 +444,34 @@ section .projects {
 
 .card img{
   width : 100%;
-  /* height: auto; */
   align-self: stretch;
   flex-shrink: 0;
-  height: 20vw;
+  height: 330px;
   position: relative; 
   object-fit: cover;
 }
 .card-content{
-  padding : 1.6vw;
+  padding : 26.4px;
 }
 
 .card-content h3{
-  font-size: 1.5vw;
+  font-size: 24.75px;
   margin-bottom: 8px;
 }
 .card-content{
   color:#282938;
-  font-size: 0.9vw;
+  font-size: 14.85px;
   Line-height: 1.3;
 }
 
 .card-content .btn{
-  padding:6px 24px;
+  padding:6px 24px; 
 }
 
 .btn {
   margin-top: 0.8vw;
   font-family: inherit;
-  font-size: 1vw;
+  font-size: 16.5px;
   background: #4275fa;
   color: #f5f5f5;
   padding-left: 0.9em;
@@ -502,13 +523,13 @@ section .projects {
 }
 
 .parent {
+  transition: all 0.3s ease-in;
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   display: flex;
-
   flex-direction: column;
   align-items: center;
-
 }
 
 .main-take {
@@ -561,7 +582,7 @@ form {
 }
 
 .contact-body h3 {
-  font-size: 1vw;
+  font-size: 16.5px;
   margin: 10px 0;
 }
 
@@ -613,7 +634,7 @@ form {
 }
 
 .contactme {
-  font-size: 1.25vw;
+  font-size: 20.625px;
   font-weight: 400;
   color: #4275fa;;
   margin-top: 2.5vw;
@@ -623,7 +644,7 @@ form {
 
 .touch {
   margin-top: 0.5vw;
-  font-size: 2vw;
+  font-size: 33px;
   font-weight: 600;
   color: #2e2d56;
   font-family: 'Poppins', sans-serif;
@@ -632,7 +653,7 @@ form {
 
 .Btn {
   margin-top: 2vw;
-  font-size: 1vw;
+  font-size: 16.5px;
   position: relative;
   display: flex;
   align-items: center;
@@ -692,7 +713,7 @@ form {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   letter-spacing: 0.72px;
-  font-size: 1.5vw;
+  font-size: 24.75px;
 }
 
 .dtext {
@@ -701,13 +722,13 @@ form {
   display: flex;
   flex-direction: column;
   color: aliceblue;
-  font-size: 1.2em;
+  font-size: 19.2px;
 }
 
 .subtitle {
   margin-top: 1vw;
   font-family: 'Poppins', sans-serif;
-  font-size: 1vw;
+  font-size: 16.5px;
   font-weight: 300; 
   color: aliceblue;
 }
@@ -723,7 +744,7 @@ form {
 
 .dbtn {
   border: none;
-  width: 4vw;
+  width: 66px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -800,4 +821,104 @@ form {
 .svg-weapper-1 {
   width: 100%;
   height: 100%;
+}
+
+/* ================ Responsive ================ */
+
+@media (max-width:1803px) {
+  .skillimg {
+    display: none;
+  }
+
+  .skillfull {
+    padding: 5vw 5vw 5vw 5vw;
+  }
+}
+
+@media (max-width:1730px) {
+  .svg::before {
+    height: 103vh;
+    width: 106vh;
+    top: -14%;
+    left: -23%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+}
+
+@media (max-width:1600px) {
+  .svg::before {
+    height: 94vh;
+    width: 96vh;
+    top: -14%;
+    left: -23%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+}
+
+@media (max-width: 1480px) {
+  .svg::before {
+    height: 90vh;
+    width: 92vh;
+    top: -14%;
+    left: -25%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+}
+
+@media (max-width: 1390px) {
+  .svg::before {
+    height: 96vh;
+    width: 98vh;
+    top: -14%;
+    left: -54%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+}
+
+@media (max-width: 1322px) {
+  .svg::before {
+    height: 96vh;
+    width: 98vh;
+    top: -14%;
+    left: -38%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+}
+
+@media (max-width: 1295px) {
+  .svg::before {
+    height: 96vh;
+    width: 98vh;
+    top: -14%;
+    left: -40%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+}
+
+@media (max-width: 774px) {
+  .content {
+    align-items: flex-start;
+  }
+
+  .logos {
+    margin-top: 80.85px;
+    width: 90vw;
+}
+}
+
+@media (max-width:1602px) {
+  .svg::before {
+    height: 96vh;
+    width: 98vh;
+    top: -14%;
+    left: -23%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
 }

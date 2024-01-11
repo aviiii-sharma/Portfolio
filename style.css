@@ -52,7 +52,6 @@ section .about {
 }
 
 .about .svg {
-  /* background-color: #111; */
   transition: all 0.2s ease-in;
     z-index: 1;
     position: absolute;
@@ -907,9 +906,15 @@ form {
   }
 
   .logos {
-    margin-top: 80.85px;
+    margin-top: 4.8vw;
     width: 90vw;
 }
+
+.mainarea {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
 }
 
 @media (max-width:1602px) {

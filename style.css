@@ -45,12 +45,6 @@ section .about {
     height: 100vh;
 }
 
-@media (max-width:1531){
-  .svg path {
-    display: none;
-  }
-}
-
 .about .svg {
   transition: all 0.2s ease-in;
     z-index: 1;
@@ -73,46 +67,137 @@ section .about {
   border: 4.8vw solid rgba(255, 255, 255, 0.102);
 }
 
-.navbar {   
-    height: 6.3vh;
-    width: 83.3%;
-    margin-top: 2vw;
-    z-index: 2;
-    position: absolute;
+.header {
+  position: absolute;
+  top: 0;
+  left: e;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
-.navbar ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    transition: all 0.3s ease-in;
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.navbar li{
-    transition: all 0.3s ease-in;
-    height: 6.3vh;
-    font-family: 'Poppins', sans-serif; 
-    font-size: 22px;  
+.logo {
+  font-size: 2.2rem;
+  color : white;
+  text-decoration: none;
 }
 
 .navbar a {
-    height: 100%;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #F5F5F5;
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 50;
+  margin-left: 2.5rem;
 }
 
-.navbar .name {
-    margin-right: auto;
-    font-family: 'Pacifico', cursive;
-    color: #F5F5F5;
-    font-size: 33px;
-    padding-left: 1.75vw;
+#check {
+  display: none;
 }
 
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color : #fff;
+  cursor: pointer;
+  display: none;
+}
+
+#name {
+  font-family: 'Pacifico', cursive;
+}
+
+.point{
+  font-family: 'Poppins', sans-serif; 
+  text-decoration: none;
+  letter-spacing: 1.44px;
+  padding: 0 1.75vw;
+}
+
+  /* ================= BREAKPOINTS ================= */
+
+@media (max-width: 1043px) {
+  .header {
+  padding: 1.3rem 5%;
+  }
+}
+
+  @media (max-width: 992px) {
+  .header {
+  padding: 1.3rem 5%;
+  }
+}
+
+  @media (max-width: 910px) {
+  .icons {
+  display: inline-flex;
+  }
+
+  #check:checked~.icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked~.icons #close-icon {
+    display: block;
+  }
+
+  .header::before {
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, .1);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    transition: .3s ease-in-out;
+  }
+
+  #check:checked~.navbar {
+    height: 14rem;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: .3s ease;
+    opacity: 0;
+  }
+
+  #check:checked~.navbar a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(.15s * var(--i));
+  }
+
+}
 
 .point{
     position: relative;
@@ -127,7 +212,7 @@ section .about {
     height: 4px;
     border-radius: 4px;
     background-color: #f5f5f5;
-    bottom: 0.6vh;
+    top: 32px;
     left: 1.27rem;
     transform-origin: left;
     transform: scaleX(0);
@@ -343,7 +428,9 @@ section .skills {
 }
 
 .skillimg img {
-  height: 84vh;
+  /* height: 84vh; */
+  width: 100%;
+  z-index: 999;
 }
 
 .content { 
@@ -426,9 +513,9 @@ section .projects {
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top: 3.1vw;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -824,7 +911,7 @@ form {
 
 /* ================ Responsive ================ */
 
-@media (max-width:1803px) {
+@media (max-width:1564px) {
   .skillimg {
     display: none;
   }
@@ -839,7 +926,7 @@ form {
     height: 103vh;
     width: 106vh;
     top: -14%;
-    left: -23%;
+    left: -13%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
   }
@@ -850,7 +937,7 @@ form {
     height: 94vh;
     width: 96vh;
     top: -14%;
-    left: -23%;
+    left: -11%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
   }
@@ -858,43 +945,59 @@ form {
 
 @media (max-width: 1480px) {
   .svg::before {
-    height: 90vh;
-    width: 92vh;
+    height: 94vh;
+    width: 97vh;
     top: -14%;
-    left: -25%;
+    left: -12%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
   }
 }
 
-@media (max-width: 1390px) {
+@media (max-width: 1411px) {
   .svg::before {
     height: 96vh;
     width: 98vh;
     top: -14%;
-    left: -54%;
+    left: -16%;
+    border-radius: 50%;
+    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+  }
+
+  /* .about .svg {
+    width: 100px;
+  } */
+
+}
+
+@media (max-width: 1359px) {
+  .svg::before {
+    height: 96vh;
+    width: 98vh;
+    top: -14%;
+    left: -19%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
   }
 }
 
-@media (max-width: 1322px) {
+@media (max-width: 1317px) {
   .svg::before {
     height: 96vh;
     width: 98vh;
     top: -14%;
-    left: -38%;
+    left: -22%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
   }
 }
 
-@media (max-width: 1295px) {
+@media (max-width: 1282px){
   .svg::before {
     height: 96vh;
     width: 98vh;
     top: -14%;
-    left: -40%;
+    left: -24%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
   }
@@ -906,24 +1009,24 @@ form {
   }
 
   .logos {
-    margin-top: 4.8vw;
+    margin-top: 10vw;
     width: 90vw;
+  }
+
+  .mainarea {
+    margin-top: 4.5vw;
+    margin-bottom: 1.5vw;
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
 }
 
-.mainarea {
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-}
-
-}
-
-@media (max-width:1602px) {
-  .svg::before {
-    height: 96vh;
-    width: 98vh;
-    top: -14%;
-    left: -23%;
-    border-radius: 50%;
-    border: 4.8vw solid rgba(255, 255, 255, 0.102);
+@media (max-width: 1468px){
+  .card {
+    width: 378.5px;
   }
 }

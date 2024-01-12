@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
@@ -26,17 +27,22 @@
             </div>
             <!-- =================== Background Image End =================== -->
 
-            <!-- navbar -->
-            <div class="navbar">
-                <ul>
-                    <li class="name"><a href="#">aviiii.sharma</a></li>
-                    <li class="point a"><a href="#">About</a></li>
-                    <li class="point s"><a href="#skills">Skills</a></li>
-                    <li class="point p"><a href="#projects">Projects</a></li>
-                    <li class="point c"><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
+            <header class="header">
+              <a href="#" class="logo" id="name">aviiii.sharma</a> 
+      
+              <input type="checkbox" id="check" >
+              <label for="check" class="icons">
+                  <i class='bx bx-menu' id="menu-icon"></i>
+                  <i class='bx bx-x' id="close-icon"></i>
+              </label>
+      
+              <nav class="navbar">
+                  <a class="point a" href="#" style="--i:1">About</a>
+                  <a class="point s" href="#skills" style="--i:2">Skills</a>
+                  <a class="point p" href="#projects" style="--i:3">Projects</a>
+                  <a class="point c" href="#contact" style="--i:4">Contact</a>
+              </nav>
+          </header>
 
             <!-- navbar end -->
             

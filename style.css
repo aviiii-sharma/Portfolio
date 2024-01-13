@@ -55,6 +55,13 @@ section .about {
 
 }
 
+/* .about .svg2 {
+  background: linear-gradient(135deg, #4275FA, rgba(17, 2, 198, 0.87));
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+} */
+
 .svg::before {
   transition: all 0.2s ease-in;
   content: "";
@@ -145,7 +152,7 @@ section .about {
 
 @media (max-width: 450px) {
   #name {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .icons {
@@ -305,8 +312,6 @@ section .about {
     height: 100%;
     display: block; 
   }  
-
-
 
 .title {
     margin-top: -10%;
@@ -1068,7 +1073,7 @@ form {
   }
 
   .logos {
-    margin-top: 10vw;
+    margin-top: 16px;
     width: 90vw;
   }
 
@@ -1118,7 +1123,7 @@ form {
 
 @media (max-width: 1468px){
   #projects {
-    height: 156vh;
+    height: 165vh;
   }
 }
 
@@ -1150,8 +1155,6 @@ form {
     margin-top: 9px;
   }
 
-
-
 }
 
 @media (max-width: 947px){
@@ -1161,6 +1164,10 @@ form {
 
   .card {
     width: 390px;
+  }
+
+  .card-container {
+    margin-top: 1.5vw;
   }
 
   .card img {
@@ -1203,10 +1210,6 @@ form {
     height: 200px;
   }
 
-  .btn {
-    font-size: 13px;
-  }
-
   #projects {
     height: 113vh;
   }
@@ -1231,7 +1234,8 @@ form {
   }
 
   .btn {
-    margin-top: 1.4vw;
+    font-size: 13px;
+    margin-top: 10px;
   }
 
 }
@@ -1239,6 +1243,10 @@ form {
 @media (max-width: 638px){
   #projects {
     height: 150vh;
+  }
+
+  .page {
+    margin-top: 25px;
   }
 }
 
@@ -1249,6 +1257,29 @@ form {
 
   #projects {
     height: 150vh;
-  }
-  
+  } 
 }
+
+@media (max-width: 1345px) {
+  .about .svg {
+    display: none;
+  }
+
+  .svg2 {
+    background: linear-gradient(135deg, #4275FA, rgba(17, 2, 198, 0.87));
+    width: 100%;
+    height: 83vh;
+    z-index: 1;
+  }
+
+  .cv {
+    width: 120px;
+  }
+
+}
+
+/* @media (max-width: 1200px) {
+  .img-container img {
+    display: none;
+  }
+} */

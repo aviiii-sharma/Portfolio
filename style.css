@@ -581,7 +581,6 @@ section .projects {
 .page {
   transition: all 0.3s ease-in;
   width: 100%;
-  height: 100vh;
   margin-top: 33px;
   display: flex;
   justify-content: flex-start;
@@ -844,7 +843,7 @@ form {
 
 .Btn .svg {
   transform: scaleX(0);
-  width: 1.3vw;
+  width: 24px;
   position: absolute;
   right: 0;
   fill: white;
@@ -1612,16 +1611,20 @@ form {
     margin-top: 10px;
 }
 
+.dicons {
+  height: 75px;
+}
+
 .dcard {
-  height: 255px;
+  height: 285px;
 }
 .subtitle {
   font-size: 14px;
-  margin-top: 7px;
+  margin-top: 17px;
 }
 
 .dname {
-  margin-top: 15px;
+  margin-top: 23px;
 }
 
 .dbtn {
@@ -1649,4 +1652,10 @@ form {
   .dtext {
     padding: 3.5vw 2vw 0 5vw;
   }
+}
+
+@media (max-width: 408px){
+  .dname {
+    margin-top: 14px;
+}
 }

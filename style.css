@@ -380,16 +380,17 @@ section .about {
 }
 
 .button {    
-      
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
   margin-left: 6%;
-    width: 30%;
+    width: 150px;
     position: relative;
     text-align: center;
     border-radius: 50px;
     font-family: 'Poppins', sans-serif; 
     transition: background 0.3s;
     border: 2px solid #F5F5F5;
-    font-size: 1vw;
+    font-size: 16.5px;
   }
   
   .button::before {
@@ -466,7 +467,7 @@ section .about {
   } 
 
 .motion {
-  height: 4vh;
+  height: 35px;
   display: inline-flex;
   margin-top: 5%;
   /* height: auto; */
@@ -1024,6 +1025,10 @@ form {
   .cv {
     width: 130px;
   }
+
+  .button {
+    width: 130px;
+  }
 }
 
 @media (max-width: 1480px) {
@@ -1288,7 +1293,7 @@ form {
   .svg2 {
     background: linear-gradient(135deg, #4275FA, rgba(17, 2, 198, 0.87));
     width: 100%;
-    height: 83vh;
+    height: 700px;
     z-index: 1;
   }
 
@@ -1302,10 +1307,6 @@ form {
     left: -30%;
     border-radius: 50%;
     border: 4.8vw solid rgba(255, 255, 255, 0.102);
-  }
-
-  .cv {
-    width: 120px;
   }
 
 }
@@ -1333,6 +1334,10 @@ form {
     display: none;
   }
 
+  .about {
+    overflow: hidden;
+  }
+
   .svg2::before {
     width: 60vh;
     height: 55vh;
@@ -1358,8 +1363,8 @@ form {
   }
 
   .cv {
-    width: 130px;
-}  
+    height: 33px;
+  }
 }
 
 @media (max-width: 1049px){
@@ -1438,15 +1443,10 @@ form {
   .about {
     justify-content: center;
   }
-
-  .img-container {
-    align-items: center;
-  }
-
   .img-container {
     margin-top: 408px;
     margin-left: 60px;
-    width: 100%;
+    width: auto;
     align-items: flex-start;
 }
 
@@ -1462,5 +1462,21 @@ form {
     height: 33px;
 }
 
+}
 
+@media (max-width: 521px){
+  .text, .cv {
+    font-size: 14px;
+  }
+
+  .cv, .button {
+    width: 110px;
+  }
+
+}
+
+@media (max-width: 450px){
+  .img-container {
+    margin-left: 8vw;
+  }
 }

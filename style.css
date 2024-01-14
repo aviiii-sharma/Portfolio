@@ -1659,3 +1659,13 @@ form {
     margin-top: 14px;
 }
 }
+
+@media (max-width: 318px){
+  .subtitle {
+    margin-top: 7px;
+  }
+
+  .dname {
+    margin-top: 10px;
+}
+}

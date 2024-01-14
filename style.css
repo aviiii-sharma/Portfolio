@@ -34,6 +34,11 @@ section {
     display: flex;
     justify-content: center;
     position: relative;
+    overflow: auto;
+}
+
+section #contact {
+  overflow: auto;
 }
 
 section .about {
@@ -205,6 +210,10 @@ section .about {
     .header {
       height: 4.5rem;
     }
+
+    .point.a::before {
+      display: none;
+  }
 
   .icons {
   display: inline-flex;
@@ -689,7 +698,6 @@ section .projects {
 
 .parent {
   transition: all 0.3s ease-in;
-  overflow: hidden;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -1278,6 +1286,10 @@ form {
     height: 150vh;
   }
 
+  .heading {
+    font-size: 25px;
+}
+
   .page {
     margin-top: 25px;
   }
@@ -1323,6 +1335,10 @@ form {
   .svg2::before {
     left: -33%;
   }
+
+  .point.a::before {
+    left: 1rem;
+}
 }
 
 @media (max-width: 1280px){
@@ -1387,6 +1403,9 @@ form {
   .front {
     font-size: 16px;
   }
+  .point.a::before {
+    top: 26px;
+  }
 }
 
 @media (max-width: 1010px){
@@ -1405,6 +1424,10 @@ form {
     height: 55vh;
     left: -32%;
     top: -20%;
+}
+
+.point.a::before {
+  width: 66%;
 }
 
 .img-container {
@@ -1486,5 +1509,144 @@ form {
 @media (max-width: 450px){
   .img-container {
     margin-left: 8vw;
+  }
+}
+
+@media (max-width: 999px){
+  .contactme {
+    font-size: 18px;
+  }
+
+  .touch {
+    font-size: 28px;
+  }
+
+  .dcard {
+    height: 310px;
+  }
+
+  .dicons {
+    margin-bottom: 0px;
+    height: 100px;
+  }
+
+  .dbtn {
+    width: 47px;
+  }
+
+  .contact-info {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .dmail, .dname {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
+  .dsmail {
+    height: 2.8vh;
+  }
+
+  .daccount {
+    height: 2.6vh;
+  }
+
+  .contact-body input {
+    padding: 0.1em;
+  }
+
+  .contact-body h3 {
+    margin-top: 0px;
+  }
+
+  .Btn {
+    font-size: 14.5px;
+    height: 35px;
+    margin-top: 20px;
+    padding: 0px 12px;
+  }
+}
+
+@media (max-width: 846px){
+  .main-take {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details {
+    width: 90%;
+  }
+
+  .head {
+    margin-top: 20px;
+  }
+
+  .info {
+    padding: 0 0 0 5vw;
+    height: 380px;
+  }
+
+  .dcard {
+    height: 287px;
+}
+
+.subtitle {
+  font-size: 15px;
+}
+
+.contact-body input {
+  width: 70vw;
+}
+
+}
+
+@media (max-width: 437px){
+  .dmail, .dname {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.dcard {
+  height: 255px;
+}
+.subtitle {
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.dname {
+  margin-top: 15px;
+}
+
+.dbtn {
+  width: 40px;
+}
+
+.head {
+  padding: 0 0 0 5vw;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.contactme {
+  font-size: 16px;
+}
+
+.touch {
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+}
+
+@media (max-width: 663px){
+  .dtext {
+    padding: 3.5vw 2vw 0 5vw;
   }
 }

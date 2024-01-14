@@ -1156,6 +1156,14 @@ form {
     font-size: 14px;
   }
 
+  .skillfull {
+    padding: 10vw 5vw 5vw 5vw;
+}
+
+.logos {
+  margin-top: 20px;
+}
+
   .expertise {
     font-size: 25px;
   }

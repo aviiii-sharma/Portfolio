@@ -331,7 +331,7 @@ section .about {
 }
   
   .img-container img {
-    margin-right: -6vw;
+    margin-right: -4vw;
     width: 660px;
     height: 100%;
     display: block; 

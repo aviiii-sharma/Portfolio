@@ -18,6 +18,45 @@ body {
     min-height: 100vh;
 }
 
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
 .container {
     z-index: -999;
     background-color: #F5F5F5;
@@ -866,6 +905,7 @@ form {
 .Btn:active {
   transform: translate(3px , 3px);
   transition-duration: .3s;
+  /* box-shadow: 2px 2px 0px #001A84; */
 }
 
 .dcard {

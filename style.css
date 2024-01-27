@@ -793,7 +793,7 @@ form {
 }
 
 .contact-body h3 {
-  font-size: 16.5px;
+  font-size: 21px;
   margin: 10px 0;
 }
 
@@ -911,7 +911,7 @@ form {
 .dcard {
   transition-duration: .3s;
   width: 100%;
-  height: 50vh;
+  height: 420px;
   border-radius: 0px 15px 15px 0px;
   background: #294ba1;
   display: flex;
@@ -924,12 +924,12 @@ form {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   letter-spacing: 0.72px;
-  font-size: 24.75px;
+  font-size: 25px;
 }
 
 .dtext {
   flex-grow: 1;
-  padding: 2vw 2vw 0 5vw;
+  padding: 2vw 2vw 0 4vw;
   display: flex;
   flex-direction: column;
   color: aliceblue;
@@ -939,18 +939,9 @@ form {
 .subtitle {
   margin-top: 1vw;
   font-family: 'Poppins', sans-serif;
-  font-size: 16.5px;
+  font-size: 19px;
   font-weight: 300; 
   color: aliceblue;
-}
-
-.dicons {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  width: 250px;
-  border-radius: 0px 0px 15px 15px;
-  overflow: hidden;
 }
 
 .dbtn {
@@ -988,13 +979,6 @@ form {
   filter: blur(0rem);
 }
 
-.dname {
-  font-weight: 600;
-  letter-spacing: 0.1vw;
-  display: flex;
-  align-items: center;
-  margin-top: 5vh;
-}
 
 .daccount {
   height: 3.6vh;
@@ -1008,22 +992,39 @@ form {
   /* width: 3.6vw; */
 }
 
+.dname {
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
 
 .dmail {
   font-weight: 600;
   letter-spacing: 0.1vw;
-  margin-top: 4vh;
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }
 
 .dicons {
+  width: 250px;
+  border-radius: 0px 0px 15px 15px;
+  overflow: hidden;
+  
+}
+
+
+.dicons {
+  padding-left: 3.7vw;
+  padding-right: 3.6vw;
   width: 100%;
-  height: 10vh;
+  /* height: 10vh; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 3vh;
+  margin-bottom: 30px;
 }
 
 .dbtnbox {
